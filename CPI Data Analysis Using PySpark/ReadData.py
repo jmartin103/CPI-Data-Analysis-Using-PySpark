@@ -13,7 +13,7 @@ sc = SparkContext(conf=conf)
 sqlContext = SQLContext(sc)
 
 # Read 2013 CPI Data
-RDD2013_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark2013Data.csv")
+RDD2013_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark/2013Data.csv")
 print RDD2013_1.take(100)
 
 # Extract lines with "All items"
