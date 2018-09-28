@@ -13,7 +13,7 @@ sc = SparkContext(conf=conf)
 sqlContext = SQLContext(sc)
 
 # Read 2013 CPI Data
-RDD2013_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark/2013Data.csv")
+RDD2013_1 = sc.textFile("2013Data.csv")
 print RDD2013_1.take(100)
 
 # Extract lines with "All items"
@@ -44,7 +44,7 @@ DF2013_4.show()
 DF2013_5 = DF2013_2.agg(max("2013 CPI"))
 DF2013_5.show()
 
-RDD2014_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark/2014Data.csv")
+RDD2014_1 = sc.textFile("2014Data.csv")
 print RDD2014_1.take(100)
 
 RDD2014_2 = RDD2014_1.filter(lambda line: "All items," in line)
@@ -69,7 +69,7 @@ DF2014_4.show()
 DF2014_5 = DF2014_2.agg(max("2014 CPI"))
 DF2014_5.show()
 
-RDD2015_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark/2015Data.csv")
+RDD2015_1 = sc.textFile("2015Data.csv")
 print RDD2015_1.take(100)
 
 RDD2015_2 = RDD2015_1.filter(lambda line: "All items," in line)
@@ -94,7 +94,7 @@ DF2015_4.show()
 DF2015_5 = DF2015_2.agg(max("2015 CPI"))
 DF2015_5.show()
 
-RDD2016_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark/2016Data.csv")
+RDD2016_1 = sc.textFile("2016Data.csv")
 print RDD2016_1.take(100)
 
 RDD2016_2 = RDD2016_1.filter(lambda line: "All items," in line)
@@ -119,7 +119,7 @@ DF2016_4.show()
 DF2016_5 = DF2016_2.agg(max("2016 CPI"))
 DF2016_5.show()
 
-RDD2017_1 = sc.textFile("C:/Users/JackHammer/CPI Data Analysis Using PySpark/2017Data.csv")
+RDD2017_1 = sc.textFile("2017Data.csv")
 print RDD2017_1.take(100)
 
 RDD2017_2 = RDD2017_1.filter(lambda line: "All items," in line)
